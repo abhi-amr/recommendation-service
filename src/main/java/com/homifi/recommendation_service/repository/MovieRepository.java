@@ -77,12 +77,13 @@ public interface MovieRepository extends Neo4jRepository<Movie, Long> {
     @Query("MATCH (m:Movie)<-[r:RATED]-() " +
             "WITH m, " +
             "     COUNT(r) AS ratingCount, " +
-            "     AVG(r.rating) AS avgRating " +
-            "RETURN m.id AS movieId, " +
+            "     AVG(r.rating) AS averageRating " +
+            "RETURN m.movieId AS movieId, " +
             "       m.title AS title, " +
+            "       m.genres AS genres, " +
             "       ratingCount, " +
-            "       avgRating, " +
-            "       (ratingCount * 0.7 + avgRating * 0.3) AS score " +
+            "       averageRating, " +
+            "       (ratingCount * 0.7 + averageRating * 0.3) AS score " +
             "ORDER BY score DESC " +
             "LIMIT $limit")
     List<MovieRecommendationDto> getTrendingMovies(Integer limit);

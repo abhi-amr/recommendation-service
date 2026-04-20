@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "a690d29b-4c5f-438e-baa9-9174349739cd",
+		"name": "Recommendation Engine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "recommendation",
+			"item": [
+				{
+					"name": "hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/recommendations/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"recommendations",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "collaborative filtering recommendations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/recommendations/5/collaborative",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"recommendations",
+								"5",
+								"collaborative"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item based recommendations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/recommendations/movie/119667",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"recommendations",
+								"movie",
+								"119667"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hybrid recommendations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/recommendations/5/hybrid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"recommendations",
+								"5",
+								"hybrid"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movie",
+			"item": [
+				{
+					"name": "get Trending Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/movie/trending",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"movie",
+								"trending"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
