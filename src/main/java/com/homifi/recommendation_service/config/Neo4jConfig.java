@@ -27,9 +27,9 @@ public class Neo4jConfig {
                 client.query("CREATE INDEX IF NOT EXISTS FOR (m:Movie) ON (m.genres)")
                         .run();
 
-                System.out.println("✓ Neo4j indexes created successfully");
+                System.out.println("Neo4j indexes created successfully");
             } catch (Exception e) {
-                System.err.println("⚠ Could not create indexes: " + e.getMessage());
+                System.err.println("Could not create indexes: " + e.getMessage());
                 // This is non-critical, so continue if it fails
             }
         };
