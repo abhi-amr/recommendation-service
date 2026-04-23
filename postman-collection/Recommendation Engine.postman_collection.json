@@ -34,7 +34,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/v1/recommendations/5/collaborative",
+							"raw": "localhost:8080/v1/recommendations/collaborative/5",
 							"host": [
 								"localhost"
 							],
@@ -42,8 +42,8 @@
 							"path": [
 								"v1",
 								"recommendations",
-								"5",
-								"collaborative"
+								"collaborative",
+								"5"
 							]
 						}
 					},
@@ -76,7 +76,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/v1/recommendations/5/hybrid",
+							"raw": "localhost:8080/v1/recommendations/hybrid/5",
 							"host": [
 								"localhost"
 							],
@@ -84,8 +84,8 @@
 							"path": [
 								"v1",
 								"recommendations",
-								"5",
-								"hybrid"
+								"hybrid",
+								"5"
 							]
 						}
 					},

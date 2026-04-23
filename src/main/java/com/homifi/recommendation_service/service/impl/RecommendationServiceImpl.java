@@ -22,32 +22,32 @@ public class RecommendationServiceImpl implements RecommendationService {
 
     @Override
     public List<MovieRecommendationDto> getCollaborativeRecommendations(Long userId, Integer limit) {
-        System.out.printf("Getting collaborative recommendation for userId %d", userId);
+        System.out.println("Getting collaborative recommendation for userId %d%n".formatted(userId));
         Long startTime = System.currentTimeMillis();
         List<MovieRecommendationDto> recommendedMovies = movieRepository.getCollaborativeRecommendations(userId, limit);
         Long endTime = System.currentTimeMillis();
-        System.out.printf("Time taken: %d ms", endTime - startTime);
+        System.out.println("Time taken: %d ms".formatted(endTime - startTime));
         return recommendedMovies;
     }
 
 
     @Override
     public List<MovieRecommendationDto> getSimilarMovieRecommendations(Long movieId, Integer limit) {
-        System.out.printf("Getting recommendation for movies similar to movieId %d", movieId);
+        System.out.println("Getting recommendation for movies similar to movieId %d".formatted(movieId));
         Long startTime = System.currentTimeMillis();
         List<MovieRecommendationDto> recommendedMovies = movieRepository.getSimilarMovieRecommendations(movieId, limit);
         Long endTime = System.currentTimeMillis();
-        System.out.printf("Time taken: %d ms", endTime - startTime);
+        System.out.println("Time taken: %d ms".formatted(endTime - startTime));
         return recommendedMovies;
     }
 
     @Override
     public List<MovieRecommendationDto> getHybridRecommendations(Long userId, Integer limit) {
-        System.out.printf("Getting hybrid recommendation for userId %d", userId);
+        System.out.println("Getting hybrid recommendation for userId %d".formatted(userId));
         Long startTime = System.currentTimeMillis();
         List<MovieRecommendationDto> recommendedMovies = movieRepository.getHybridRecommendations(userId, limit);
         Long endTime = System.currentTimeMillis();
-        System.out.printf("Time taken: %d ms", endTime - startTime);
+        System.out.println("Time taken: %d ms".formatted(endTime - startTime));
         return recommendedMovies;
     }
 

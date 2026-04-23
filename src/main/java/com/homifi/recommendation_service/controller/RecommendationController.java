@@ -34,7 +34,7 @@ public class RecommendationController {
     *
     * User-Based Collaborative Filtering
     * */
-    @GetMapping("/{userId}/collaborative")
+    @GetMapping("/collaborative/{userId}")
     public ResponseEntity<List<MovieRecommendationDto>> getCollaborativeRecommendations(@PathVariable Long userId,
                                                                                         @RequestParam(value = "limit", defaultValue = "10") Integer limit) {
         List<MovieRecommendationDto> recommendations = recommendationService.getCollaborativeRecommendations(userId, limit);
@@ -63,7 +63,7 @@ public class RecommendationController {
      *
      * Hybrid Recommendations
      * */
-    @GetMapping("/{userId}/hybrid")
+    @GetMapping("/hybrid/{userId}")
     public ResponseEntity<List<MovieRecommendationDto>> getHybridRecommendations(@PathVariable Long userId,
                                                                                  @RequestParam(value = "limit", defaultValue = "10") Integer limit) {
         List<MovieRecommendationDto> recommendations = recommendationService.getHybridRecommendations(userId, limit);

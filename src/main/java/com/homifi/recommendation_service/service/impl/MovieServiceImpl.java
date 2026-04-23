@@ -22,7 +22,7 @@ public class MovieServiceImpl implements MovieService {
         Long startTime = System.currentTimeMillis();
         List<MovieRecommendationDto> trendingMovies = movieRepository.getTrendingMovies(limit);
         Long endTime = System.currentTimeMillis();
-        System.out.printf("Time taken: %d ms", endTime - startTime);
+        System.out.println("Time taken: %d ms".formatted(endTime - startTime));
         return trendingMovies;
     }
 
