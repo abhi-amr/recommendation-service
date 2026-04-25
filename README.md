@@ -46,7 +46,6 @@ All recommendation responses return a list of:
 - 🎥 **Item-based filtering** — movie-to-movie similarity recommendations
 - 🔀 **Hybrid recommendations** — best of both worlds
 - 📈 **Trending movies** — surface globally popular movies
-- 📥 **Bulk data loader** — ingest the full MovieLens 32M dataset via Neo4j's `LOAD CSV`
 - 🔌 **Clean REST API** with versioned endpoints (`/v1/...`)
 
 ---
